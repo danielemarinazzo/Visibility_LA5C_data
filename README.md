@@ -5,7 +5,7 @@ https://openfmri.org/dataset/ds000030/
 
 the Visibility code is found on danielemarinazzo/Visibility
 
-The Shen278.mat file contains the Shen Parcellation and the attribution to Yeo's networks
+The yeo_RS7_278.mat file contains the Shen Parcellation and the attribution to Yeo's networks
 
 The results_LA5c.mat file contains the results and other variables:
 
