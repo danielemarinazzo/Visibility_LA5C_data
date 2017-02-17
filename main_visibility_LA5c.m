@@ -1,7 +1,7 @@
 currdir=pwd;
 addpath(pwd);
-load('/home/daniele/Dropbox/code/sample_fMRI/Shen268/Shen268_yeo_RS7.mat') %Shen-Yeo parcels
-maindir='/home/daniele/LA5c/processed/'; %path to processed data
+load('/yeo_RS7_278.mat') %Shen-Yeo parcels
+maindir=''; %path to processed data
 subs=dir([maindir 'sub*']);
 for isub=1:length(subs);
     subdir=fullfile(maindir,subs(isub).name,'/fmri_rest/')
@@ -9,7 +9,7 @@ for isub=1:length(subs);
     load data_ROI_278 %the time series for the 278 parcels, contained in the path defined above
     npoints=size(data_ROI,1);
     EO_YEO=zeros(9,npoints,npoints);MI=zeros(9,1);
-    for iYeo=1
+    for iYeo=1:9 %loop over 9 RS networks
         indx=find(yeoROIs==iYeo);
         data_Yeo=data_ROI(:,indx);
         for nroi=1:length(indx)-1
